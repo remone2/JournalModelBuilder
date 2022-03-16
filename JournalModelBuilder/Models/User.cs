@@ -2,12 +2,14 @@
 {
     public class User
     {
-        public int Id { get; set; }
+        public int UserId { get; set; }
         public string UserName { get; set; }
-        public ICollection<Journal> Journals { get; set; }
+        public ICollection<Journal> OwnJournals { get; set; }
+        public int EditJournalId { get; set; }
+        public Journal EditJournal { get; set; }
         public User()
         {
-            Journals = new HashSet<Journal>();
+            OwnJournals = new HashSet<Journal>();
         }
     }
 }
